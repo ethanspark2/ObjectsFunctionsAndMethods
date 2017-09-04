@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ethan Park.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -75,11 +75,15 @@ def main():
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
     window.tracer(1, 1)
-
     jump_and_move_turtle(100, 50, 200, -100)
     turtle = rg.SimpleTurtle('square')
+    jump_and_move_turtle(200,100,300,30)
+    turtle4()
+    jump_and_move_turtle(100,200,0,0)
     draw_many_squares(turtle, 3, 75, 15)
     turtle3()
+    jump_and_move_turtle(-50,50,100,100)
+    turtle5()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
@@ -160,6 +164,41 @@ def turtle3():
     maja.draw_circle(50)
     maja.end_fill()
 
+def turtle4():
+
+    jack = rg.SimpleTurtle()
+    jack.pen = rg.Pen('brown', 5)
+    jack.paint_bucket = rg.PaintBucket('green')
+    jack.forward(150)
+    jack.left(90)
+    jack.forward(50)
+    jack.backward(100)
+
+    jack.begin_fill()
+    jack.draw_circle(50)
+    jack.end_fill()
+
+def turtle5():
+
+    pete = rg.SimpleTurtle()
+    pete.pen = rg.Pen('blue', 5)
+    pete.backward(150)
+    pete.speed = 1
+    draw_many_squares(pete,2,100,30)
+    pete.pen = rg.Pen('red', 5)
+    pete.speed = 5
+    draw_many_squares(pete,10,50,15)
+    pete.speed = 100
+    pete.pen = rg.Pen('blue',35)
+    draw_many_squares(pete,8, 300, 60)
+    pete.pen = rg.Pen('black',3)
+    pete.backward(200)
+    pete.draw_circle(30)
+    pete.draw_square(50)
+
+
+
+
 
 def try_methods():
     """
@@ -172,7 +211,7 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
@@ -186,7 +225,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -232,7 +271,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
